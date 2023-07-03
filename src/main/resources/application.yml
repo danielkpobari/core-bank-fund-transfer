@@ -1,0 +1,19 @@
+server:
+  port: 8084
+spring:
+  application:
+    name: core-bank-fund-transfer
+  datasource:
+    url: jdbc:mysql://localhost:3306/bankingcorefundtransfer
+    username: root
+    password: 12345678
+  jpa:
+    hibernate:
+      ddl-auto: update
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:8081/eureka
+info:
+  app:
+    name: ${spring.application.name}
